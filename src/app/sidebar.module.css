@@ -1,0 +1,58 @@
+/* app/utils.module.css */
+.sidebar {
+    margin: 0;
+    padding: 10px;
+    width: 300px;
+    background-color: #f8f4f4;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    
+}
+
+.Menulist  {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
+  
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+
+.Menulist:hover{
+    background-color: #0073e6;
+    color: white;
+    border-radius: 10px;
+}
+.Linklist {
+
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.LinklistItem{
+    display: flex;
+    align-items: center;
+}
+
+.Linklist span {
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.content {
+    margin-left: 300px;
+   
+    
+}
+.copyrightText {
+    font-size: 10px;
+}
