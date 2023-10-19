@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
       </BrowserView>
-      {/* mobile View Start */}
+      {/* mobile View Start now */}
       <MobileView>
         <NavbarMobile />
         <HomePageMobile />
