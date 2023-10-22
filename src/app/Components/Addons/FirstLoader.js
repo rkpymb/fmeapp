@@ -24,13 +24,18 @@ export default function SimpleBackdrop() {
                 open={true}
                 
             >
-                <div>
-                    <Lottie options={defaultOptions}
-                        width='100%'
-                        height={400}
-                        isStopped={false}
-                        isPaused={false} />
-                </div>
+                <div className={styles.FirstLoaderBox}>
+                    <div className={styles.NavLogo}>
+                        <img src="/fmelogo-dark.svg" alt="logo" />
+                    </div>
+                    <div>
+                        <Lottie options={defaultOptions}
+                            width='100%'
+                            height={50}
+                            isStopped={false}
+                            isPaused={false} />
+                    </div>
+               </div>
             </Backdrop>
             
         </div>

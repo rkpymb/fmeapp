@@ -4,7 +4,7 @@ import Link from "next/link"
 import styles from "@/app/page.module.css"
 import { UseLoginContext } from '../../context/auth/CheckLogin'
 import Skeleton from '@mui/material/Skeleton';
-import { StorageURl } from '../../../../Data/config'
+import { StorageURl, MediaFilesFolder, MediaFilesUrl } from '../../../../Data/config'
 import PostComents from '../../Components/Addons/PostComents'
 import { HiOutlineMapPin, HiOutlineUserCircle } from "react-icons/hi2";
 import Image from 'next/image'
@@ -20,6 +20,7 @@ const page = ({ params }) => {
   const [Postdata, setPostData] = useState();
   const [IsLoading, setIsLoading] = useState(true);
   const [UserMobile, setUserMobile] = useState(null);
+  
   const [VideoURI, setVideoURI] = useState('https://fmenew.sgp1.cdn.digitaloceanspaces.com/fmereelsvides/');
 
   useEffect(() => {
@@ -114,7 +115,7 @@ const page = ({ params }) => {
                 {Postdata.PType == 1 &&
                   <div className={styles.PostDetailsBoxLeftImg}>
                     <div className={styles.PostDetailsBoxLimgBox}>
-                      <Image src={`${StorageURl}/panel/Vendorphotos/${Postdata.ContentData}`} alt="image"
+                      <Image src={`${MediaFilesUrl}${MediaFilesFolder}/${Postdata.ContentData}`} alt="image"
                         layout="responsive"
                         placeholder='blur'
                         width={10}
@@ -131,7 +132,7 @@ const page = ({ params }) => {
                   <div className={styles.PostDetailsBoxLeftImg}>
                     <div className={styles.videobox}>
                       <video
-                        src={`${VideoURI}${Postdata.ContentData}`}
+                        src={`${MediaFilesUrl}${MediaFilesFolder}/${Postdata.ContentData}`}
                         autoPlay
                         type={'video/mp4'}
                         loop
@@ -182,7 +183,7 @@ const page = ({ params }) => {
 
           {!IsLoading &&
             <div className={styles.PostDetailsBox}>
-
+             
               <div className={styles.PostDetailsBoxLeft}>
                 <div className={styles.PostedBybox}>
                   <div className={styles.FeedHeader}>
@@ -214,7 +215,7 @@ const page = ({ params }) => {
                 {Postdata.PType == 1 &&
                   <div className={styles.PostDetailsBoxLeftImg}>
                     <div className={styles.PostDetailsBoxLimgBox}>
-                      <Image src={`${StorageURl}/panel/Vendorphotos/${Postdata.ContentData}`} alt="image"
+                      <Image src={`${MediaFilesUrl}${MediaFilesFolder}/${Postdata.ContentData}`} alt="image"
                         layout="responsive"
                         placeholder='blur'
                         width={10}
@@ -229,9 +230,12 @@ const page = ({ params }) => {
 
                 {Postdata.PType == 2 &&
                   <div className={styles.PostDetailsBoxLeftImg}>
+                   
                     <div className={styles.videobox}>
+                     
                       <video
-                        src={`${VideoURI}${Postdata.ContentData}`}
+                       
+                        src={`${MediaFilesUrl}${MediaFilesFolder}/${Postdata.ContentData}`}
                         autoPlay
                         type={'video/mp4'}
                         loop
@@ -251,10 +255,10 @@ const page = ({ params }) => {
 
                 }
 
-
+              
               </div>
               <div className={styles.PostDetailsBoxRightM}>
-
+                ygg
                 <PostComents Postdata={Postdata} VendorData={VendorData} />
               </div>
             </div>

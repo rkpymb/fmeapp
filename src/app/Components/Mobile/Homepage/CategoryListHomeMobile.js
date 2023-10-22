@@ -45,11 +45,13 @@ const MenuCatlist = () => {
   return (
     <div>
      
-      <div className={styles.IconTitle}>
-        <FiTrendingUp size={20} />
-        <span style={{ fontSize: 14, fontWeight: 'bold' }}>Browes by Category</span>
-      </div>
-      <div style={{ minHeight: 10 }}></div>
+      <div style={{padding:'10px'}}>
+        <div className={styles.IconTitle}>
+          <FiTrendingUp size={20} />
+          <span style={{ fontSize: 14, fontWeight: 'bold' }}>Browes by Category</span>
+        </div>
+     </div>
+      
 
       {isLoading &&
         <div>

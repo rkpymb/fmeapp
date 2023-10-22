@@ -1,9 +1,9 @@
 import FeedlistHome from '@/app/Components/List/FeedlistHome'
 
-const HomepageBox = () => {
+const HomepageBox = ({Type}) => {
     return (
         <>
-            <FeedlistHome/>
+            <FeedlistHome Type={Type} />
           
         </>
     )
